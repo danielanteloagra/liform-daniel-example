@@ -2,7 +2,7 @@
   "name": "liform-daniel-example",
   "version": "1.0.0",
   "description": "An example of liform-react usage",
-  "main": "index.js",
+  "main": "src/js/main.js",
   "scripts": {
     "build": "webpack",
     "clean": "rimraf dist",
