@@ -1,10 +1,12 @@
+let path = require('path');
+
 module.exports = {
     devtool: 'eval-source-map',
     entry: {
         main: './src/js/main.js'
     },
     output: {
-        path: './dist/',
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
     resolve: {

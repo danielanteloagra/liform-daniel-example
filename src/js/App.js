@@ -5,6 +5,9 @@ import { Provider } from 'react-redux'
 import Example1 from './Example1'
 import Example2 from './Example2'
 import Example3 from './Example3'
+import Example4 from './Example4'
+import { I18nextProvider } from 'react-i18next'
+import i18n from './i18n';
 
 
 const onSubmit = (values) => { window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`) }
@@ -31,6 +34,15 @@ const App = () => {
                     In this example we also specify a custom base layout with a reset button and different styles.
                 </p>
                 <Example3 onSubmit={onSubmit}/>
+                <h2>With translations</h2>
+                <p>
+                    Using context for translations.
+                    We can pass a context object that can contain a method for translatinf custom widgets.
+                    Also, we can provide a syncValidation function, where we can use the localized version of ajv.
+                </p>
+                <I18nextProvider i18n={ i18n }>
+                    <Example4 onSubmit={onSubmit}/>
+                </I18nextProvider>
             </div>
         </Provider>
     )
