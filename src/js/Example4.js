@@ -82,7 +82,7 @@ const buildSyncValidation = schema => {
 
 
 const schema={
-    'title': 'third-example',
+    'title': 'fourth-example',
     'properties': {
         'email': {
             'title':'E-mail',
